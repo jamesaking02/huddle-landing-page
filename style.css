@@ -42,7 +42,7 @@ html body {
 
 .huddle-content__heading {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 10vw, 2.5rem);
   margin-bottom: .5em;
 }
 
@@ -63,30 +63,91 @@ html body {
   padding: 1em;
   margin-bottom: 4.5em;
   width: 15em;
+}
 
-
+.huddle-content__button:hover {
+  cursor: pointer;
+  background-color: var(--soft-magenta);
+  color: white;
+  transition: all .1s ease-in;
 }
 
 .socials {
   display: grid;
-  grid-template-columns: repeat(3, 2em);
+  grid-template-columns: repeat(3, 1.9em);
   gap: .5em;
   place-content: center;
 }
 
-.socials__facebook {
+.socials__container--fb {
   width: 0.7em;
   margin: 0 auto;
 }
 
-.socials__border {
+.socials__container {
+  background-color: transparent;
   border: 1px solid white;
   border-radius: 4em;
   padding: .3em;
+  fill: white;
 }
 
-.socials--invert {
+.socials__container:hover {
+  cursor: pointer;
+  border-color: var(--soft-magenta);
+  fill: var(--soft-magenta);
+  transition: all .1s ease-in;
+}
+
+svg {
   display: block;
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
+}
+
+@media only screen and (width > 900px) {
+  html body {
+    background: url(./images/bg-desktop.svg), var(--violet);
+    background-repeat: no-repeat;
+    background-size: 102em;
+  }
+
+  main {
+    height: 80dvh;
+    display: grid;
+    grid-template-columns: auto .45fr;
+    place-content: center;
+    gap: 0 3em;
+  }
+
+  .huddle-logo {
+    width: revert;
+    margin: 0 19em;
+  }
+
+  .huddle-content {
+    text-align: left;
+    padding-top: 2em;
+  }
+
+  .huddle-img__mockup {
+    width: revert;
+  }
+
+  .huddle-content__button {
+    font-size: 1.2rem;
+    width: 11em;
+  }
+
+  .socials {
+    margin-left: auto;
+    grid-column: 2;
+    grid-template-columns: repeat(3, 2.5em);
+  }
+
+  .socials__container {
+    padding: .7em;
+  }
+
+  .socials__container--fb {
+    width: 0.8em;
+  }
 }
