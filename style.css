@@ -13,6 +13,21 @@ html body {
   background: url(./images/bg-mobile.svg), var(--violet);
   background-repeat: no-repeat;
   background-size: contain;
+  padding: 2em;
+}
+
+.huddle-logo,
+.huddle-img__mockup {
+  display: block;
+}
+
+.huddle-logo {
+  width: 9em;
+}
+
+.huddle-img__mockup {
+  width: 20em;
+  margin: 0 auto;
 }
 
 .socials {
