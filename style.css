@@ -103,6 +103,23 @@ svg {
   display: block;
 }
 
+/* footer */
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  color: white;
+}
+
+.attribution a {
+  color: white;
+}
+
+.attribution a:hover { 
+  transition: all .1s ease-in;
+  color: var(--soft-magenta); 
+}
+
+/* desktop styles */
 @media only screen and (width > 900px) {
   html body {
     background: url(./images/bg-desktop.svg), var(--violet);
